@@ -1,0 +1,61 @@
+digraph graphname {
+	graph [bb="0,0,626.37,160",
+		compound=True,
+		rank=same,
+		rankdir=LR,
+		ranksep=0.2
+	];
+	node [label="\N"];
+	subgraph cluster_oparm {
+		graph [bb="266.68,8,541.68,137",
+			compound=True,
+			label=oparm,
+			lheight=0.21,
+			lp="404.18,125.5",
+			lwidth=0.50,
+			rank=same,
+			rankdir=LR,
+			ranksep=0.2,
+			style=bold
+		];
+		t___oparm__joint2_position_controller__command		 [URL=topic_3A__oparm__joint2_position_controller__command,
+			height=0.5,
+			label="/oparm/joint2_position_controller/command",
+			pos="404.18,88",
+			shape=box,
+			tooltip="topic:/oparm/joint2_position_controller/command",
+			width=3.5972];
+		n___oparm__controller_spawner		 [URL=__oparm__controller_spawner,
+			height=0.5,
+			label="/oparm/controller_spawner",
+			pos="404.18,34",
+			shape=ellipse,
+			tooltip="/oparm/controller_spawner",
+			width=2.9608];
+	}
+	n___gazebo	 [URL=__gazebo,
+		height=0.5,
+		label="/gazebo",
+		pos="588.02,88",
+		shape=ellipse,
+		tooltip="/gazebo",
+		width=1.0652];
+	t___oparm__joint2_position_controller__command -> n___gazebo	 [penwidth=1,
+		pos="e,549.61,88 533.94,88 535.82,88 537.68,88 539.51,88"];
+	n___rostopic_18010_1567515776491	 [URL=__rostopic_18010_1567515776491,
+		height=0.5,
+		label="/rostopic_18010_1567515776491",
+		pos="129.34,88",
+		shape=ellipse,
+		tooltip="/rostopic_18010_1567515776491",
+		width=3.5927];
+	n___rostopic_18010_1567515776491 -> t___oparm__joint2_position_controller__command	 [penwidth=1,
+		pos="e,274.54,88 258.77,88 260.57,88 262.38,88 264.19,88"];
+	n___gazebo_gui	 [URL=__gazebo_gui,
+		height=0.5,
+		label="/gazebo_gui",
+		pos="129.34,142",
+		shape=ellipse,
+		tooltip="/gazebo_gui",
+		width=1.4985];
+}

@@ -7,6 +7,14 @@
 	<xacro:include filename="$(find oparm_description)/urdf/robot_parameters.xacro" />
 	<!-- END - Include -->
 	<!-- BGN - Robot description -->
+	  <!-- Used for fixing robot to Gazebo 'base_link' -->
+    <link name="world"/>
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="${l00}"/>
+    </joint>
+
 	<m_link_mesh name="${l00}"
 							 origin_rpy="0 0 0" origin_xyz="0 0 0"
 							 mass="0.5"
